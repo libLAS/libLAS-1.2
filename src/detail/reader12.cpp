@@ -330,8 +330,8 @@ bool ReaderImpl::ReadPointAt(std::size_t n, LASPoint& point, LASHeader const& he
     else if (header.GetDataFormatId() == LASHeader::ePointFormat2)
     {
         detail::read_n(red, m_ifs, sizeof(uint16_t));
-        detail::read_n(blue, m_ifs, sizeof(uint16_t));
         detail::read_n(green, m_ifs, sizeof(uint16_t));
+        detail::read_n(blue, m_ifs, sizeof(uint16_t));
         color.SetRed(red);
         color.SetBlue(blue);
         color.SetGreen(green);
@@ -342,8 +342,8 @@ bool ReaderImpl::ReadPointAt(std::size_t n, LASPoint& point, LASHeader const& he
         detail::read_n(t, m_ifs, sizeof(double));
         point.SetTime(t);
         detail::read_n(red, m_ifs, sizeof(uint16_t));
-        detail::read_n(blue, m_ifs, sizeof(uint16_t));
         detail::read_n(green, m_ifs, sizeof(uint16_t));
+        detail::read_n(blue, m_ifs, sizeof(uint16_t));
         color.SetRed(red);
         color.SetBlue(blue);
         color.SetGreen(green);
