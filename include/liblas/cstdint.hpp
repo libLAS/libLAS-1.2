@@ -114,10 +114,10 @@ namespace liblas
 */
 
 #ifndef UINT32_C
-# if ULONG_MAX == 0xffffffff
-    typedef unsigned long   uint32_t;
-# elif UINT_MAX == 0xffffffff
-    typedef unsigned int    uint32_t;
+# if UINT_MAX == 0xffffffff
+    typedef unsigned int  uint32_t;
+# elif ULONG_MAX == 0xffffffff
+    typedef unsigned long uint32_t;
 # else
 #   error defaults not correct; you must hand modify liblas/cstdint.hpp
 # endif
